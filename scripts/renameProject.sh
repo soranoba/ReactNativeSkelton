@@ -18,4 +18,5 @@ for SRC_FILE in $(find . -name ${SRC_NAME}* -type f); do
 done
 
 export LANG=C
-grep --exclude "*/node_modules/*" --exclude "*/vendor/*" --exclude "*/.git/*" -r ${SRC_NAME} -l .. | xargs sed -i '' "s|${SRC_NAME}|${DST_NAME}|g"
+grep --exclude "*/node_modules/*" --exclude "*/vendor/*" --exclude "*/.git/*" -r ${SRC_NAME} -l $(dirname $0)/.. | \
+    xargs sed -i '' "s|${SRC_NAME}|${DST_NAME}|g"
