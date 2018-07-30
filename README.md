@@ -1,9 +1,8 @@
 # ReactNativeSkelton
+[![Build Status](https://app.bitrise.io/app/0e02772d9cedf334/status.svg?token=ZtpKDsXah_XE80i-4MKIVw&branch=master)](https://app.bitrise.io/app/0e02772d9cedf334)
 
 A skelton project of [ReactNative](https://facebook.github.io/react-native/) based [CreateReactNativeApp](https://github.com/react-community/create-react-native-app).
 It support iOS, Android and Web without Expo.
-
------
 
 ## Why does this repository exist?
 
