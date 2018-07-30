@@ -19,8 +19,6 @@ const babelLoaderConfiguration = {
     path.resolve(appDirectory, 'node_modules/react-native-paper'),
     path.resolve(appDirectory, 'node_modules/react-native-vector-icons'),
     path.resolve(appDirectory, 'node_modules/react-native-safe-area-view'),
-    path.resolve(appDirectory, 'node_modules/@expo/samples'),
-    path.resolve(appDirectory, 'node_modules/@expo/vector-icons'),
     path.resolve(appDirectory, 'node_modules/react-native-platform-touchable'),
   ],
   use: {
@@ -32,7 +30,6 @@ const babelLoaderConfiguration = {
       // This aliases 'react-native' to 'react-native-web' and includes only
       // the modules needed by the app.
       plugins: [
-        'expo-web',
         'react-native-web',
         'transform-decorators-legacy',
         ['transform-runtime', { helpers: false, polyfill: false, regenerator: true }],
@@ -113,10 +110,6 @@ module.exports = {
     symlinks: false,
     extensions: ['.web.js', '.js'],
     alias: {
-      './assets/images/expo-icon.png': './assets/images/expo-icon@2x.png',
-      './assets/images/slack-icon.png': './assets/images/slack-icon@2x.png',
-      '@expo/vector-icons': 'expo-web',
-      expo: 'expo-web',
       'react-native': 'react-native-web',
     },
   },
