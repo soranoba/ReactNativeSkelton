@@ -1,0 +1,13 @@
+
+platform :ios, '9.0'
+
+target 'ReactNativeSkelton' do
+  use_frameworks!
+
+  target 'ReactNativeSkeltonTests' do
+    inherit! :search_paths
+  end
+
+  script_phase :name => 'StartPackager',
+               :script => 'sh ../scripts/launchPackager.sh'
+end
