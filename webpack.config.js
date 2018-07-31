@@ -24,18 +24,8 @@ const babelLoaderConfiguration = {
   use: {
     loader: 'babel-loader',
     options: {
-      // cacheDirectory: false,
-      babelrc: false,
-      // Babel configuration (or use .babelrc)
-      // This aliases 'react-native' to 'react-native-web' and includes only
-      // the modules needed by the app.
-      plugins: [
-        'react-native-web',
-        'transform-decorators-legacy',
-        ['transform-runtime', { helpers: false, polyfill: false, regenerator: true }],
-      ],
-      // The 'react-native' preset is recommended to match React Native's packager
-      presets: ['react-native'],
+      babelrc: true,
+      plugins: ["transform-runtime"],
     },
   },
 };
