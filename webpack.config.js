@@ -66,12 +66,19 @@ module.exports = {
   // your web-specific entry file
   entry: path.resolve(appDirectory, 'src/index.js'),
   devtool: 'eval',
+  mode: process.env.WEBPACK_SERVE ? 'development' : 'production',
 
   // configures where the build ends up
   output: {
     filename: 'bundle.js',
     publicPath: '/assets/',
     path: path.resolve(appDirectory, './public/assets'),
+  },
+  serve: {
+    content: path.resolve(appDirectory, './public'),
+    devMiddleware: {
+      publicPath: '/assets/'
+    },
   },
 
   module: {
