@@ -24,18 +24,8 @@ const babelLoaderConfiguration = {
   use: {
     loader: 'babel-loader',
     options: {
-      // cacheDirectory: false,
-      babelrc: false,
-      // Babel configuration (or use .babelrc)
-      // This aliases 'react-native' to 'react-native-web' and includes only
-      // the modules needed by the app.
-      plugins: [
-        'react-native-web',
-        'transform-decorators-legacy',
-        ['transform-runtime', { helpers: false, polyfill: false, regenerator: true }],
-      ],
-      // The 'react-native' preset is recommended to match React Native's packager
-      presets: ['react-native'],
+      babelrc: true,
+      plugins: ["transform-runtime"],
     },
   },
 };
@@ -76,12 +66,19 @@ module.exports = {
   // your web-specific entry file
   entry: path.resolve(appDirectory, 'src/index.js'),
   devtool: 'eval',
+  mode: process.env.WEBPACK_SERVE ? 'development' : 'production',
 
   // configures where the build ends up
   output: {
     filename: 'bundle.js',
     publicPath: '/assets/',
     path: path.resolve(appDirectory, './public/assets'),
+  },
+  serve: {
+    content: path.resolve(appDirectory, './public'),
+    devMiddleware: {
+      publicPath: '/assets/'
+    },
   },
 
   module: {
