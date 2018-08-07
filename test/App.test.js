@@ -1,8 +1,7 @@
 import 'react-native';
 import React from 'react';
-import App from '../src/App';
-
 import renderer from 'react-test-renderer';
+import App from '../src/App';
 
 it('renders without crashing', () => {
   const rendered = renderer.create(<App />).toJSON();
