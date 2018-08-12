@@ -108,6 +108,7 @@ module.exports = {
     extensions: ['.web.js', '.js'],
     alias: {
       'react-native': 'react-native-web',
+      'babel-runtime': '@babel/runtime'
     },
   },
 };

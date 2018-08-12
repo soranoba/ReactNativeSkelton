@@ -38,6 +38,7 @@ GEM
       nap (~> 1.0)
     cocoapods-deintegrate (1.0.2)
     cocoapods-downloader (1.2.1)
+    cocoapods-fix-react-native (2018.07.04.16)
     cocoapods-plugins (1.0.0)
       nap
     cocoapods-search (1.0.0)
@@ -205,6 +206,7 @@ PLATFORMS
 
 DEPENDENCIES
   cocoapods (= 1.5.3)
+  cocoapods-fix-react-native (= 2018.07.04.16)
   fastlane (= 2.100.1)
   synx (= 0.2.1)
 

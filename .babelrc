@@ -1,12 +1,5 @@
 {
   "presets": [
-    "env", "react-native"
-  ],
-  "env": {
-    "development": {
-      "plugins": [
-        "transform-react-jsx-source"
-      ]
-    }
-  }
+    "@babel/preset-env", "react-native"
+  ]
 }
