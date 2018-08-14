@@ -20,6 +20,14 @@ ci: init build test lint
 	cd ios; $(MAKE) ci
 	cd android; $(MAKE) ci
 
+ci_web: init build test lint
+
+ci_ios: init
+	cd ios; $(MAKE) ci
+
+ci_android: init
+	cd android; $(MAKE) ci
+
 lint:
 	npm run-script lint
 
