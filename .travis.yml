@@ -1,0 +1,30 @@
+matrix:
+  include:
+    - language: node_js
+      node_js: 8
+      rvm:
+        - 2.3
+      script:
+        - sh scripts/renameProject.sh NewMyProject
+        - make ci_web
+    - language: android
+      before_install:
+        - nvm install 8
+      android:
+        components:
+          - build-tools-28.0.1
+          - android-26
+      rvm:
+        - 2.3
+      script:
+        - sh scripts/renameProject.sh NewMyProject
+        - make ci_android
+    #- language: objective-c
+    #  os: osx
+    #  osx_image: xcode9.4
+    #  node_js: 8
+    #  rvm:
+    #    - 2.3
+    #  script:
+    #    - sh scripts/renameProject.sh NewMyProject
+    #    - make ci_ios

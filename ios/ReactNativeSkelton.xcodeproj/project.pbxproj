@@ -12,8 +12,8 @@
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		29B62A416BC4C39EA202C7B5 /* Pods_ReactNativeSkeltonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69BB7D72ABAF87E2796E4DC /* Pods_ReactNativeSkeltonTests.framework */; };
-		D18FF08A47C0688B17BD178A /* Pods_ReactNativeSkelton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE46FBBDCD0D6660C16D221F /* Pods_ReactNativeSkelton.framework */; };
+		40069F105BAA7BABF91F63C0 /* libPods-ReactNativeSkelton.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDEF5122DF2BA59798F589A3 /* libPods-ReactNativeSkelton.a */; };
+		7B61B75649857795AD7828F7 /* libPods-ReactNativeSkeltonTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 39D94754DC82097F94A6C587 /* libPods-ReactNativeSkeltonTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,12 +38,12 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ReactNativeSkelton/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ReactNativeSkelton/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ReactNativeSkelton/main.m; sourceTree = "<group>"; };
+		39D94754DC82097F94A6C587 /* libPods-ReactNativeSkeltonTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactNativeSkeltonTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5121DF5E1655755AF70DECC0 /* Pods-ReactNativeSkeltonTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeSkeltonTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactNativeSkeltonTests/Pods-ReactNativeSkeltonTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5E62C3DF0F7125E8416EC553 /* Pods-ReactNativeSkeltonTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeSkeltonTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactNativeSkeltonTests/Pods-ReactNativeSkeltonTests.release.xcconfig"; sourceTree = "<group>"; };
 		9921A83D6870D6AF26F1B491 /* Pods-ReactNativeSkelton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeSkelton.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactNativeSkelton/Pods-ReactNativeSkelton.debug.xcconfig"; sourceTree = "<group>"; };
-		AE46FBBDCD0D6660C16D221F /* Pods_ReactNativeSkelton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactNativeSkelton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C485F055F381E6B0BE783C9B /* Pods-ReactNativeSkelton.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeSkelton.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactNativeSkelton/Pods-ReactNativeSkelton.release.xcconfig"; sourceTree = "<group>"; };
-		F69BB7D72ABAF87E2796E4DC /* Pods_ReactNativeSkeltonTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactNativeSkeltonTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDEF5122DF2BA59798F589A3 /* libPods-ReactNativeSkelton.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactNativeSkelton.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29B62A416BC4C39EA202C7B5 /* Pods_ReactNativeSkeltonTests.framework in Frameworks */,
+				7B61B75649857795AD7828F7 /* libPods-ReactNativeSkeltonTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D18FF08A47C0688B17BD178A /* Pods_ReactNativeSkelton.framework in Frameworks */,
+				40069F105BAA7BABF91F63C0 /* libPods-ReactNativeSkelton.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,8 +100,8 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AE46FBBDCD0D6660C16D221F /* Pods_ReactNativeSkelton.framework */,
-				F69BB7D72ABAF87E2796E4DC /* Pods_ReactNativeSkeltonTests.framework */,
+				CDEF5122DF2BA59798F589A3 /* libPods-ReactNativeSkelton.a */,
+				39D94754DC82097F94A6C587 /* libPods-ReactNativeSkeltonTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -172,7 +172,6 @@
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				E258D89A5514A3D5C2087FA9 /* [CP-User] StartPackager */,
-				951068F6DB4692239B0A6180 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -249,33 +248,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
-		};
-		951068F6DB4692239B0A6180 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ReactNativeSkelton/Pods-ReactNativeSkelton-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/DoubleConversion/DoubleConversion.framework",
-				"${BUILT_PRODUCTS_DIR}/Folly/folly.framework",
-				"${BUILT_PRODUCTS_DIR}/React/React.framework",
-				"${BUILT_PRODUCTS_DIR}/glog/glog.framework",
-				"${BUILT_PRODUCTS_DIR}/yoga/yoga.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DoubleConversion.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/folly.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/glog.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/yoga.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReactNativeSkelton/Pods-ReactNativeSkelton-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh ./src/index.native.js";
 		};
 		97273127C1BB978F15350C09 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

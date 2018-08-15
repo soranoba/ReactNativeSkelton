@@ -2,7 +2,7 @@
 .PHONY: test
 
 init:
-	npm install
+	npm install --no-save
 
 start:
 	npm start
@@ -18,6 +18,14 @@ build:
 
 ci: init build test lint
 	cd ios; $(MAKE) ci
+	cd android; $(MAKE) ci
+
+ci_web: init build test lint
+
+ci_ios: init
+	cd ios; $(MAKE) ci
+
+ci_android: init
 	cd android; $(MAKE) ci
 
 lint:
