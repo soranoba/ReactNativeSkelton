@@ -20,6 +20,9 @@ target 'ReactNativeSkelton' do
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec',
                :inhibit_warnings => true
 
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons',
+                       :inhibit_warnings => true
+
   target 'ReactNativeSkeltonTests' do
     inherit! :search_paths
   end
