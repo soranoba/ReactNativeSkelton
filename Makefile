@@ -4,6 +4,9 @@
 init:
 	npm install --no-save
 
+open:
+	open -a "Visual Studio Code" .
+
 start:
 	npm start
 

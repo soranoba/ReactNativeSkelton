@@ -25,6 +25,7 @@ const babelLoaderConfiguration = {
     loader: 'babel-loader',
     options: {
       babelrc: true,
+      presets: ["react-native"],
       plugins: ["transform-runtime"],
     },
   },

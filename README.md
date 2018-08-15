@@ -4,9 +4,11 @@
 A skelton project of [ReactNative](https://facebook.github.io/react-native/) based [CreateReactNativeApp](https://github.com/react-community/create-react-native-app).
 It support iOS, Android and Web without Expo.
 
-## Why does this repository exist?
+## Description
 
-Because CreateReactNativeApp is not maintained.
+### Dependencies
+
+- [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons)
 
 ## Requirements
 
