@@ -17,6 +17,7 @@ default_platform(:ios)
 
 platform :ios do
   lane :tests do
-    run_tests()
+    ENV["FORCE_BUNDLING"] = "1"
+    run_tests(xcargs: "GCC_PREPROCESSOR_DEFINITIONS='FORCE_BUNDLING=1'")
   end
 end

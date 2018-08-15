@@ -16,7 +16,11 @@
 {
   NSURL *jsCodeLocation;
 
+#if DEBUG && !(FORCE_BUNDLING)
   jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"src/index.native" fallbackResource:nil];
+#else
+  jsCodeLocation = [[NSBundle bundleForClass:[self class]] URLForResource:@"main" withExtension:@"jsbundle"];
+#endif
 
   RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
                                                       moduleName:@"ReactNativeSkelton"
