@@ -2,7 +2,7 @@
 .PHONY: test
 
 init:
-	npm install
+	npm install --no-save
 
 start:
 	npm start
