@@ -23,7 +23,7 @@ class Row extends React.Component {
   }
 }
 
-export default class extends React.Component {
+export default class FontExample extends React.Component {
   render() {
     return (
       <View style={{ flex: 1 }}>
