@@ -22,6 +22,10 @@ const babelLoaderConfiguration = {
     path.resolve(appDirectory, 'node_modules/react-native-vector-icons'),
     path.resolve(appDirectory, 'node_modules/react-native-safe-area-view'),
     path.resolve(appDirectory, 'node_modules/react-native-platform-touchable'),
+    path.resolve(appDirectory, 'node_modules/native-base-shoutem-theme'),
+    path.resolve(appDirectory, 'node_modules/react-native-keyboard-aware-scroll-view'),
+    path.resolve(appDirectory, 'node_modules/react-native-easy-grid'),
+    path.resolve(appDirectory, 'node_modules/native-base/node_modules/react-native-vector-icons'),
   ],
   use: {
     loader: 'babel-loader',
@@ -84,7 +88,7 @@ module.exports = {
     },
     add: (app, middleware, options) => {
       const historyOptions = {
-        // ... see: https://github.com/bripkens/connect-history-api-fallback#options                                                   
+        // ... see: https://github.com/bripkens/connect-history-api-fallback#options
       };
       app.use(convert(history(historyOptions)));
     },

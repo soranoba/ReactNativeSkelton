@@ -45,7 +45,7 @@ export default class FontExample extends React.Component {
         </Row>
         <Row>
           <Text>FontAwesome5</Text>
-          <FontAwesome5 name="adversal" size={30} color="purple" />
+          <FontAwesome5 name="apple" size={30} color="purple" light={false} solid={false} />
         </Row>
         <Row>
           <Text>Foundation</Text>

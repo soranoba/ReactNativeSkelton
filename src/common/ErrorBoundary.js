@@ -1,5 +1,10 @@
+/**
+ * @author Hinagiku Soranoba <soranoba@gmail.com>
+ * @license MIT
+ */
 import React from 'react';
 import PropTypes from 'prop-types';
+
 /**
  * ErrorBoundary
  * see: https://reactjs.org/docs/error-boundaries.html
