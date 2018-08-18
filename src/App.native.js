@@ -54,7 +54,12 @@ export default class App extends React.Component {
             <SafeAreaView style={{ flex: 1 }}>
               <SwipeableRouteContainer>
                 {this.routes.map(route => (
-                  <Route exact={route.exact} key={route.path} path={route.path} component={route.component} />
+                  <Route
+                    exact={route.exact}
+                    key={route.path}
+                    path={route.path}
+                    component={route.component}
+                  />
                 ))}
               </SwipeableRouteContainer>
             </SafeAreaView>

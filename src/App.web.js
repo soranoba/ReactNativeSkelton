@@ -33,7 +33,12 @@ export default class App extends React.Component {
           </Header>
           <Content>
             {routes.map(route => (
-              <Route exact={route.exact || false} key={route.path} path={route.path} component={route.component} />
+              <Route
+                exact={route.exact || false}
+                key={route.path}
+                path={route.path}
+                component={route.component}
+              />
             ))}
           </Content>
         </Container>

@@ -1,11 +1,3 @@
 {
   "extends": ["universe/native", "universe/web", "universe/node"],
-  "overrides": [{
-    "files": ["**/*.js"],
-    "rules": {
-      "prettier/prettier": {
-        printWidth: 120,
-      }
-    }
-  }]
 }

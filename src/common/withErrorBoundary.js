@@ -18,7 +18,9 @@ function displayName(Component) {
  */
 export default (Component, ErrorComponent) => {
   return class extends React.Component {
-    static displayName = `withErrorBoundary(${displayName(Component)}, ${displayName(ErrorComponent)})`;
+    static displayName = `withErrorBoundary(${displayName(Component)}, ${displayName(
+      ErrorComponent
+    )})`;
     render(props) {
       return (
         <ErrorBoundary component={ErrorComponent}>

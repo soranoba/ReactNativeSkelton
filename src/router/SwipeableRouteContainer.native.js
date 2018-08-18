@@ -140,28 +140,33 @@ class SwipeableRouteContainer extends React.Component {
     const viewStyle = { width: this.state.width };
 
     return (
-      <Animated.View
-        style={{ flex: 1, flexDirection: 'row', transform }}
-        onLayout={this.onLayout}
-        {...this.panResponder.panHandlers}>
-        {prevIndex != null && prevIndex > currentIndex ? (
-          <View key={currentLocation.pathname} style={viewStyle}>
-            {currentChildren}
+      <View style={{ flex: 1 }} onLayout={this.onLayout} {...this.panResponder.panHandlers}>
+        <Animated.View
+          style={{
+            width: this.state.width * 3,
+            height: this.state.height,
+            flexDirection: 'row',
+            transform,
+          }}>
+          {prevIndex != null && prevIndex > currentIndex ? (
+            <View key={currentLocation.pathname} style={viewStyle}>
+              {currentChildren}
+            </View>
+          ) : (
+            <View style={viewStyle} />
+          )}
+          <View key={prevLocation.pathname} style={viewStyle}>
+            {animationEnded || prevChildren}
           </View>
-        ) : (
-          <View style={viewStyle} />
-        )}
-        <View key={prevLocation.pathname} style={viewStyle}>
-          {animationEnded || prevChildren}
-        </View>
-        {prevIndex != null && prevIndex < currentIndex ? (
-          <View key={currentLocation.pathname} style={viewStyle}>
-            {currentChildren}
-          </View>
-        ) : (
-          <View style={viewStyle} />
-        )}
-      </Animated.View>
+          {prevIndex != null && prevIndex < currentIndex ? (
+            <View key={currentLocation.pathname} style={viewStyle}>
+              {currentChildren}
+            </View>
+          ) : (
+            <View style={viewStyle} />
+          )}
+        </Animated.View>
+      </View>
     );
   }
 }
