@@ -1,6 +1,7 @@
 import React from 'react';
 import { StatusBar, SafeAreaView, Platform, View, Text } from 'react-native';
-import { NativeRouter as Router, Route } from 'react-router-native';
+import { Route } from 'react-router-native';
+import Router from 'react-router-native/NativeRouter';
 import { Container, Footer, FooterTab, Icon } from 'native-base';
 import PropTypes from 'prop-types';
 import SwipeableRouteContainer from './router/SwipeableRouteContainer';

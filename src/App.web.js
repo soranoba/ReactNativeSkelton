@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
+import Router from 'react-router-dom/BrowserRouter';
 import { Header, Content, Container } from 'native-base';
 import withErrorBoundary from './common/withErrorBoundary';
 import ErrorDisplayScreen from './example/ErrorDisplayScreen';

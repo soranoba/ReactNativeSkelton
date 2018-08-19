@@ -12,7 +12,7 @@
 #import <React/RCTRootView.h>
 
 #define TIMEOUT_SECONDS 60
-#define TEXT_TO_LOOK_FOR @"Open up src/App.js to start working on your app!"
+#define TEXT_TO_LOOK_FOR @"Home"
 
 @interface ReactNativeSkeltonTests : XCTestCase
 
