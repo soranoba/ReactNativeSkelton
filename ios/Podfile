@@ -10,6 +10,8 @@ target 'ReactNativeSkelton' do
     'RCTNetwork',
     'RCTWebSocket',
     'RCTAnimation',
+    'RCTLinkingIOS',
+    'RCTImage',
   ], :inhibit_warnings => true
   pod 'yoga',             :path => '../node_modules/react-native/ReactCommon/yoga',
                           :inhibit_warnings => true

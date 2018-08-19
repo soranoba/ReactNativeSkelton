@@ -2,6 +2,8 @@
 
 const path = require('path');
 const webpack = require('webpack');
+const history = require('connect-history-api-fallback');
+const convert = require('koa-connect');
 
 const appDirectory = path.resolve(__dirname, './');
 
@@ -20,6 +22,10 @@ const babelLoaderConfiguration = {
     path.resolve(appDirectory, 'node_modules/react-native-vector-icons'),
     path.resolve(appDirectory, 'node_modules/react-native-safe-area-view'),
     path.resolve(appDirectory, 'node_modules/react-native-platform-touchable'),
+    path.resolve(appDirectory, 'node_modules/native-base-shoutem-theme'),
+    path.resolve(appDirectory, 'node_modules/react-native-keyboard-aware-scroll-view'),
+    path.resolve(appDirectory, 'node_modules/react-native-easy-grid'),
+    path.resolve(appDirectory, 'node_modules/native-base/node_modules/react-native-vector-icons'),
   ],
   use: {
     loader: 'babel-loader',
@@ -80,6 +86,12 @@ module.exports = {
     devMiddleware: {
       publicPath: '/assets/'
     },
+    add: (app, middleware, options) => {
+      const historyOptions = {
+        // ... see: https://github.com/bripkens/connect-history-api-fallback#options
+      };
+      app.use(convert(history(historyOptions)));
+    },
   },
 
   module: {
@@ -109,7 +121,8 @@ module.exports = {
     extensions: ['.web.js', '.js'],
     alias: {
       'react-native': 'react-native-web',
-      'babel-runtime': '@babel/runtime'
+      'babel-runtime': '@babel/runtime',
+      'react-router-native': 'react-router-dom',
     },
   },
 };

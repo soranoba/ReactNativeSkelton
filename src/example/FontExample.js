@@ -23,7 +23,7 @@ class Row extends React.Component {
   }
 }
 
-export default class extends React.Component {
+export default class FontExample extends React.Component {
   render() {
     return (
       <View style={{ flex: 1 }}>
@@ -45,7 +45,7 @@ export default class extends React.Component {
         </Row>
         <Row>
           <Text>FontAwesome5</Text>
-          <FontAwesome5 name="adversal" size={30} color="purple" />
+          <FontAwesome5 name="apple" size={30} color="purple" light={false} solid={false} />
         </Row>
         <Row>
           <Text>Foundation</Text>
