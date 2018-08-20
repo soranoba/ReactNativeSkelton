@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorBoundary renders currectly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "red",
+    }
+  }
+/>
+`;
+
+exports[`ErrorBoundary renders currectly 2`] = `
+<View
+  error={[Error: message]}
+  info={
+    Object {
+      "info": "infoMessage",
+    }
+  }
+  style={
+    Object {
+      "backgroundColor": "green",
+    }
+  }
+/>
+`;

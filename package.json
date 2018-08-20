@@ -10,6 +10,8 @@
     "babel-preset-react-native": "~5.0.2",
     "connect-history-api-fallback": "^1.5.0",
     "css-loader": "~0.28.7",
+    "enzyme": "^3.4.4",
+    "enzyme-adapter-react-16": "^1.2.0",
     "eslint": "~4.19.1",
     "eslint-config-universe": "~1.0.7",
     "file-loader": "~1.1.7",
@@ -42,13 +44,23 @@
         ],
         "moduleNameMapper": {
           "^/(.*)$": "<rootDir>/src/$1",
+          "^react-router-dom/BrowserRouter$": "react-router/MemoryRouter",
+          "^react-router-native/NativeRouter$": "react-router/MemoryRouter",
           "^react-native-vector-icons/FontAwesome5$": "react-native-vector-icons/FontAwesome"
         },
-        "moduleFileExtensions": ["js", "native.js", "ios.js", "android.js"],
+        "moduleFileExtensions": [
+          "js",
+          "native.js",
+          "ios.js",
+          "android.js"
+        ],
         "transform": {
           "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
         },
-        "transformIgnorePatterns": []
+        "transformIgnorePatterns": [],
+        "setupFiles": [
+          "./scripts/jestSetup.js"
+        ]
       },
       {
         "displayName": "web+shared",
@@ -62,15 +74,21 @@
         "testURL": "http://localhost/",
         "moduleNameMapper": {
           "^/(.*)$": "<rootDir>/src/$1",
-          "^react-native((/.*)?)$": "react-native-web$1",
           "^react-router-dom/BrowserRouter$": "react-router/MemoryRouter",
-          "^react-router-native((/.*)?)$": "react-router-dom$1"
+          "^react-router-native/NativeRouter$": "react-router/MemoryRouter",
+          "^react-native-vector-icons/FontAwesome5$": "react-native-vector-icons/FontAwesome"
         },
-        "moduleFileExtensions": ["js", "web.js"],
+        "moduleFileExtensions": [
+          "js",
+          "web.js"
+        ],
         "transform": {
           "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
         },
-        "transformIgnorePatterns": []
+        "transformIgnorePatterns": [],
+        "setupFiles": [
+          "./scripts/jestSetup.js"
+        ]
       }
     ]
   },

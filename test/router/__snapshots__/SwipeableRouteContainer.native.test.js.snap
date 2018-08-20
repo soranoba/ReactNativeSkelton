@@ -1,0 +1,289 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SwipeableRouteContainer renders correctly, after transitioning from \`/a\` to \`/c\` 1`] = `
+<View
+  onLayout={[Function]}
+  onMoveShouldSetResponder={[Function]}
+  onMoveShouldSetResponderCapture={[Function]}
+  onResponderEnd={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderReject={[Function]}
+  onResponderRelease={[Function]}
+  onResponderStart={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onStartShouldSetResponderCapture={[Function]}
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "height": 400,
+        "transform": Array [
+          Object {
+            "translateX": -200,
+          },
+        ],
+        "width": 600,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "width": 200,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "width": 200,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "red",
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "width": 200,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "green",
+          }
+        }
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`SwipeableRouteContainer renders correctly, after transitioning from \`/c\` to \`/a\` 1`] = `
+<View
+  onLayout={[Function]}
+  onMoveShouldSetResponder={[Function]}
+  onMoveShouldSetResponderCapture={[Function]}
+  onResponderEnd={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderReject={[Function]}
+  onResponderRelease={[Function]}
+  onResponderStart={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onStartShouldSetResponderCapture={[Function]}
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "height": 400,
+        "transform": Array [
+          Object {
+            "translateX": -200,
+          },
+        ],
+        "width": 600,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "width": 200,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "red",
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "width": 200,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "green",
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "width": 200,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`SwipeableRouteContainer renders currectly 1`] = `
+<View
+  onLayout={[Function]}
+  onMoveShouldSetResponder={[Function]}
+  onMoveShouldSetResponderCapture={[Function]}
+  onResponderEnd={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderReject={[Function]}
+  onResponderRelease={[Function]}
+  onResponderStart={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onStartShouldSetResponderCapture={[Function]}
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "height": 0,
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+        ],
+        "width": 0,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "width": 0,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "width": 0,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "red",
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "width": 0,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`SwipeableRouteContainer renders currectly, after onLayout called 1`] = `
+<View
+  onLayout={[Function]}
+  onMoveShouldSetResponder={[Function]}
+  onMoveShouldSetResponderCapture={[Function]}
+  onResponderEnd={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderReject={[Function]}
+  onResponderRelease={[Function]}
+  onResponderStart={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onStartShouldSetResponderCapture={[Function]}
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "height": 400,
+        "transform": Array [
+          Object {
+            "translateX": -200,
+          },
+        ],
+        "width": 600,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "width": 200,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "width": 200,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "red",
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "width": 200,
+        }
+      }
+    />
+  </View>
+</View>
+`;

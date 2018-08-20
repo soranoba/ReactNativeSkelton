@@ -25,7 +25,9 @@ export default class SelectableLink extends React.Component {
     const link = ({ match }) => {
       return (
         <Link style={{ flex: 1 }} to={to} {...rest}>
-          {React.cloneElement(React.Children.only(children), { selected: match && match.isExact })}
+          {React.cloneElement(React.Children.only(children), {
+            selected: !!(match && match.isExact),
+          })}
         </Link>
       );
     };
