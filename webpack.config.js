@@ -72,7 +72,7 @@ const ttfLoaderConfiguration = {
 module.exports = {
   // your web-specific entry file
   entry: path.resolve(appDirectory, 'src/index.js'),
-  devtool: 'eval',
+  devtool: 'eval-source-map',
   mode: process.env.WEBPACK_SERVE ? 'development' : 'production',
 
   // configures where the build ends up
@@ -124,5 +124,9 @@ module.exports = {
       'babel-runtime': '@babel/runtime',
       'react-router-native': 'react-router-dom',
     },
+    modules: [
+      'node_modules',
+      path.resolve(appDirectory, 'src'),
+    ],
   },
 };
