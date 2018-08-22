@@ -41,7 +41,11 @@ export default class ExceptionCapture extends React.Component {
     })();
   }
   componentWillUnmount() {
-    ErrorUtils.setGlobalHandler(this.state.originalGlobalHandler);
+    if (Platform.OS === 'web') {
+      window.onerror = this.state.originalGlobalHandler;
+    } else {
+      ErrorUtils.setGlobalHandler(this.state.originalGlobalHandler);
+    }
   }
   render() {
     if (this.state.hasError) {
