@@ -1,5 +1,5 @@
 
-.PHONY: test
+.PHONY: test build
 
 init:
 	npm install --no-save
@@ -18,6 +18,10 @@ web:
 
 build:
 	npm run build
+
+build_native:
+	react-native bundle --entry-file src/index.native.js --platform ios --dev false --bundle-output build/main.ios.jsbundle --sourcemap-output build/main.ios.jsbundle.map
+	react-native bundle --entry-file src/index.native.js --platform android --dev false --bundle-output build/main.android.jsbundle --sourcemap-output build/main.android.jsbundle.map
 
 ci: init build test lint
 	cd ios; $(MAKE) ci

@@ -72,7 +72,7 @@ const ttfLoaderConfiguration = {
 module.exports = {
   // your web-specific entry file
   entry: path.resolve(appDirectory, 'src/index.js'),
-  devtool: 'eval-source-map',
+  devtool: 'source-map',
   mode: process.env.WEBPACK_SERVE ? 'development' : 'production',
 
   // configures where the build ends up

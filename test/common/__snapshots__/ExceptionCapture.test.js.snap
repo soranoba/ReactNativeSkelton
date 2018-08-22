@@ -13,7 +13,6 @@ exports[`ExceptionCapture renders currectly 1`] = `
 exports[`ExceptionCapture renders currectly 2`] = `
 <View
   error={[Error: abort]}
-  isFatal={true}
   style={
     Object {
       "backgroundColor": "green",

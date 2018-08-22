@@ -3,6 +3,7 @@
  * @license MIT
  */
 import React from 'react';
+import { Platform } from 'react-native';
 import PropTypes from 'prop-types';
 
 /**
@@ -19,10 +20,20 @@ export default class ExceptionCapture extends React.Component {
     this.state = { error: null, isFatal: null, hasError: false, originalGlobalHandler: null };
   }
   componentDidMount() {
-    const originalGlobalHandler = ErrorUtils.getGlobalHandler();
-    ErrorUtils.setGlobalHandler((error, isFatal) => {
-      this.setState({ error, isFatal, hasError: true });
-    });
+    var originalGlobalHandler = null;
+    const handler = error => {
+      this.setState({ error, hasError: true });
+    };
+
+    if (Platform.OS === 'web') {
+      originalGlobalHandler = window.onerror;
+      window.onerror = (message, url, line, col, error) => {
+        handler(error);
+      };
+    } else {
+      originalGlobalHandler = ErrorUtils.getGlobalHandler();
+      ErrorUtils.setGlobalHandler(handler);
+    }
 
     // NOTE: To avoid `react/no-did-mount-set-state`
     (() => {
@@ -35,7 +46,7 @@ export default class ExceptionCapture extends React.Component {
   render() {
     if (this.state.hasError) {
       const Component = this.props.component;
-      return <Component error={this.state.error} isFatal={this.state.isFatal} />;
+      return <Component error={this.state.error} />;
     }
     return this.props.children;
   }
