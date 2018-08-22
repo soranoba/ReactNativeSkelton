@@ -17,7 +17,7 @@ export default class ExceptionCapture extends React.Component {
   };
   constructor(props) {
     super(props);
-    this.state = { error: null, isFatal: null, hasError: false, originalGlobalHandler: null };
+    this.state = { error: null, hasError: false, originalGlobalHandler: null };
   }
   componentDidMount() {
     var originalGlobalHandler = null;
