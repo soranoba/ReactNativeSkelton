@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExceptionCapture renders currectly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "red",
+    }
+  }
+/>
+`;
+
+exports[`ExceptionCapture renders currectly 2`] = `
+<View
+  error={[Error: abort]}
+  isFatal={true}
+  style={
+    Object {
+      "backgroundColor": "green",
+    }
+  }
+/>
+`;

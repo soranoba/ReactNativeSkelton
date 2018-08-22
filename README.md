@@ -8,9 +8,9 @@ It support iOS, Android and Web without Expo.
 
 ### Dependencies
 
+- [react-router](https://github.com/ReactTraining/react-router)
 - [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons)
-
-## Requirements
+- [native-base](https://github.com/GeekyAnts/NativeBase)
 
 ## Usage
 
