@@ -53,15 +53,15 @@ Original Position:
 
 Code Section:
 22 | export default class ExceptionCaptureScreen extends React.Component {
-23 |     render() {
-24 |         return (
-25 |             <ExceptionCapture component={ExceptionDisplaySccreen}>
-26 |             <View>
-27>|                 <Button title="crash" onPress={() => this.undefined()} />
-                                                               ^
-28 |             </View>
-29 |         </ExceptionCapture>
-30 |         );
-31 |     }
+23 |   render() {
+24 |     return (
+25 |       <ExceptionCapture component={ExceptionDisplaySccreen}>
+26 |         <View>
+27>|           <Button title="crash" onPress={() => this.undefined()} />
+                                                   ^
+28 |         </View>
+29 |       </ExceptionCapture>
+30 |     );
+31 |   }
 32 | }
 ```
