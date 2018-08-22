@@ -2,38 +2,22 @@ import React from 'react';
 import { Route, Link } from 'react-router-dom';
 import Router from 'react-router-dom/BrowserRouter';
 import { Header, Content, Container } from 'native-base';
-import withErrorBoundary from './common/withErrorBoundary';
-import ErrorDisplayScreen from './example/ErrorDisplayScreen';
-import FontExample from './example/FontExample';
-import ErrorThrowScreen from './example/ErrorThrowScreen';
+import applicationRoutes from './router/applicationRoutes';
 
 export default class App extends React.Component {
   render() {
-    const routes = [
-      {
-        path: '/',
-        exact: true,
-        title: 'Home',
-        component: withErrorBoundary(FontExample, ErrorDisplayScreen),
-      },
-      {
-        path: '/errors',
-        title: 'Error',
-        component: withErrorBoundary(ErrorThrowScreen, ErrorDisplayScreen),
-      },
-    ];
     return (
       <Router>
         <Container>
           <Header>
-            {routes.map(route => (
+            {applicationRoutes.map(route => (
               <Link key={route.path} to={route.path}>
                 {route.title}
               </Link>
             ))}
           </Header>
           <Content>
-            {routes.map(route => (
+            {applicationRoutes.map(route => (
               <Route
                 exact={route.exact || false}
                 key={route.path}

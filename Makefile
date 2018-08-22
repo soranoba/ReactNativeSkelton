@@ -1,5 +1,5 @@
 
-.PHONY: test
+.PHONY: test build
 
 init:
 	npm install --no-save

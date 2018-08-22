@@ -22,6 +22,6 @@ export default [
     path: '/throw',
     title: 'Exception',
     iconName: 'bug-report',
-    component: ExceptionCaptureScreen
-  }
+    component: ExceptionCaptureScreen,
+  },
 ];

@@ -26,3 +26,42 @@ sh scripts/renameProject.sh ${YOUR_PROJECT_NAME}
 ```bash
 make ci
 ```
+
+## Crash Report
+
+```bash
+## (1) Install a sourcemap tool
+
+$ npm i -g sourcemap-lookup
+
+## (2) Create bundle and sourcemap for release build corresponding to current revision
+
+## for web
+$ make build
+## for native
+$ make build_native
+
+## (3) Display the source code from the lineNumber and columnNumber of the stack
+
+## for web
+$ sourcemap-lookup public/assets/bundle.js:1:10101
+## for native
+$ sourcemap-lookup build/main.ios.jsbundle:867:1279 -s /
+
+Original Position:
+         /ReactNativeSkelton/src/example/ExceptionCaptureScreen.js, Line 27:58
+
+Code Section:
+22 | export default class ExceptionCaptureScreen extends React.Component {
+23 |     render() {
+24 |         return (
+25 |             <ExceptionCapture component={ExceptionDisplaySccreen}>
+26 |             <View>
+27>|                 <Button title="crash" onPress={() => this.undefined()} />
+                                                               ^
+28 |             </View>
+29 |         </ExceptionCapture>
+30 |         );
+31 |     }
+32 | }
+```
