@@ -17,7 +17,7 @@ export default class ExceptionCapture extends React.Component {
   };
   constructor(props) {
     super(props);
-    this.state = { error: null, isFatal: null, hasError: false, originalGlobalHandler: null };
+    this.state = { error: null, hasError: false, originalGlobalHandler: null };
   }
   componentDidMount() {
     var originalGlobalHandler = null;
@@ -41,7 +41,11 @@ export default class ExceptionCapture extends React.Component {
     })();
   }
   componentWillUnmount() {
-    ErrorUtils.setGlobalHandler(this.state.originalGlobalHandler);
+    if (Platform.OS === 'web') {
+      window.onerror = this.state.originalGlobalHandler;
+    } else {
+      ErrorUtils.setGlobalHandler(this.state.originalGlobalHandler);
+    }
   }
   render() {
     if (this.state.hasError) {
