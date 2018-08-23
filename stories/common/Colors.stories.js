@@ -1,12 +1,15 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
+import { storiesOf, addDecorator } from '@storybook/react';
 
 import { AppleColors, MaterialDesignColors } from 'common/Colors';
-import { Text, StyleSheet } from 'react-native';
-import { Col, Row, Grid } from 'react-native-easy-grid';
+import { View, Text, StyleSheet } from 'react-native';
+import { Row, Grid } from 'react-native-easy-grid';
+import { withKnobs, number } from '@storybook/addon-knobs';
+
+addDecorator(withKnobs);
 
 storiesOf('Colors', module)
-  .add('AppleColors', () => (
+  .addWithJSX('AppleColors', () => (
     <Grid>
       {[
         { text: 'red', style: AppleColors.red },
@@ -17,16 +20,15 @@ storiesOf('Colors', module)
         { text: 'purple', style: AppleColors.purple },
         { text: 'pink', style: AppleColors.pink },
       ].map(({ text, style }) => (
-        <Row key={text} style={{ height: 50 }}>
-          <Col style={{ width: 100 }}>
+        <Row key={text} style={{ height: number('Height', 50) }}>
+          <View style={{ flex: 1, backgroundColor: StyleSheet.flatten([style]).color }}>
             <Text>{text}</Text>
-          </Col>
-          <Col style={{ backgroundColor: StyleSheet.flatten([style]).color }} />
+          </View>
         </Row>
       ))}
     </Grid>
   ))
-  .add('MaterialDesignColors', () => (
+  .addWithJSX('MaterialDesignColors', () => (
     <Grid>
       {[
         { text: 'red-200', style: MaterialDesignColors.red200 },
@@ -87,11 +89,10 @@ storiesOf('Colors', module)
         { text: 'blueGray-500', style: MaterialDesignColors.blueGray500 },
         { text: 'blueGray-700', style: MaterialDesignColors.blueGray700 },
       ].map(({ text, style }) => (
-        <Row key={text} style={{ height: 50 }}>
-          <Col style={{ width: 150 }}>
+        <Row key={text} style={{ height: number('Height', 50) }}>
+          <View style={{ flex: 1, backgroundColor: StyleSheet.flatten([style]).color }}>
             <Text>{text}</Text>
-          </Col>
-          <Col style={{ backgroundColor: StyleSheet.flatten([style]).color }} />
+          </View>
         </Row>
       ))}
     </Grid>

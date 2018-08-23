@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
 import Router from 'react-router-dom/BrowserRouter';
-import { Header, Content, Container } from 'native-base';
+import { Header, Container } from 'native-base';
 import applicationRoutes from './router/applicationRoutes';
 
 export default class App extends React.Component {
@@ -16,16 +16,14 @@ export default class App extends React.Component {
               </Link>
             ))}
           </Header>
-          <Content>
-            {applicationRoutes.map(route => (
-              <Route
-                exact={route.exact || false}
-                key={route.path}
-                path={route.path}
-                component={route.component}
-              />
-            ))}
-          </Content>
+          {applicationRoutes.map(route => (
+            <Route
+              exact={route.exact || false}
+              key={route.path}
+              path={route.path}
+              component={route.component}
+            />
+          ))}
         </Container>
       </Router>
     );
