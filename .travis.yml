@@ -7,19 +7,19 @@ matrix:
       script:
         - sh scripts/renameProject.sh NewMyProject
         - make ci_web
-    - language: android
-      before_install:
-        - nvm install 8
-        - yes | sdkmanager "platforms;android-26"
-      android:
-        components:
-          - build-tools-27.0.3
-          - build-tools-28.0.3
-      rvm:
-        - 2.3
-      script:
-        - sh scripts/renameProject.sh NewMyProject
-        - make ci_android
+    #- language: android
+    #  before_install:
+    #    - nvm install 8
+    #    - yes | sdkmanager "platforms;android-26"
+    #  android:
+    #    components:
+    #      - build-tools-27.0.3
+    #      - build-tools-28.0.3
+    #  rvm:
+    #    - 2.3
+    #  script:
+    #    - sh scripts/renameProject.sh NewMyProject
+    #    - make ci_android
     #- language: objective-c
     #  os: osx
     #  osx_image: xcode9.4
