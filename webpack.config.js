@@ -33,7 +33,6 @@ const babelLoaderConfiguration = {
     options: {
       babelrc: true,
       presets: ["module:metro-react-native-babel-preset"],
-      plugins: ["transform-runtime"],
     },
   },
 };
@@ -122,7 +121,6 @@ module.exports = {
     extensions: ['.web.js', '.js'],
     alias: {
       'react-native': 'react-native-web',
-      'babel-runtime': '@babel/runtime',
       'react-router-native': 'react-router-dom',
     },
     modules: [
