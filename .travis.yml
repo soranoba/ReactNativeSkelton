@@ -10,11 +10,11 @@ matrix:
     - language: android
       before_install:
         - nvm install 8
+        - yes | sdkmanager "platforms;android-26"
       android:
         components:
           - build-tools-27.0.3
-          - build-tools-28.0.1
-          - android-26
+          - build-tools-28.0.3
       rvm:
         - 2.3
       script:

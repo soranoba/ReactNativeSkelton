@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text } from 'react-native';
+import AntDesign from 'react-native-vector-icons/AntDesign';
 import Entypo from 'react-native-vector-icons/Entypo';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
 import Feather from 'react-native-vector-icons/Feather';
@@ -27,6 +28,10 @@ export default class FontExample extends React.Component {
   render() {
     return (
       <View style={{ flex: 1 }}>
+        <Row>
+          <Text>AntDesign</Text>
+          <AntDesign name="heart" size={30} color="gray" />
+        </Row>
         <Row>
           <Text>Entypo</Text>
           <Entypo name="adjust" size={30} color="red" />

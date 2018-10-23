@@ -1,4 +1,9 @@
 @font-face {
+    font-family: "AntDesign";
+    src: url("~react-native-vector-icons/Fonts/AntDesign.ttf") format("truetype");
+}
+
+@font-face {
     font-family: "Entypo";
     src: url("~react-native-vector-icons/Fonts/Entypo.ttf") format("truetype");
 }

@@ -45,7 +45,7 @@ PODS:
     - React/Core
     - React/fishhook
     - React/RCTBlob
-  - RNVectorIcons (5.0.0):
+  - RNVectorIcons (6.0.2):
     - React
   - yoga (0.57.0.React)
 
@@ -89,7 +89,7 @@ SPEC CHECKSUMS:
   Folly: c89ac2d5c6ab169cd7397ef27485c44f35f742c7
   glog: e8acf0ebbf99759d3ff18c86c292a5898282dcde
   React: 1fe0eb13d90b625d94c3b117c274dcfd2e760e11
-  RNVectorIcons: c0dbfbf6068fefa240c37b0f71bd03b45dddac44
+  RNVectorIcons: 8c52e1e8da1153613fdef44748e865c25556cb9c
   yoga: b1ce48b6cf950b98deae82838f5173ea7cf89e85
 
 PODFILE CHECKSUM: d89be1ef02868d78c3848b99abce911edb30a5a8
